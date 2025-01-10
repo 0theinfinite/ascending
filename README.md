@@ -38,15 +38,12 @@ The repository is organized as follows:
   - `analysis.py` 
   - `sentiment_analysis.py` 
   - `visualization.py` 
-- `/notebooks`
-  - Jupyter notebooks for exploratory and statistical analysis.
-- `/results` - Generated outputs and visualizations.
+- `/notebooks` # Jupyter notebooks for exploratory and statistical analysis.
+- `/results` # Generated outputs and visualizations.
 - `README.md`
 - `LICENSE`
-- `requirements.txt`
-  - Python dependencies required to run the project.
-- `main.py`
-  - Main entry point for orchestrating the project workflow.
+- `requirements.txt` # Python dependencies required to run the project.
+- `main.py` # Main entry point for orchestrating the project workflow.
 
 ## Contributors
 - **Carrie Huang**
