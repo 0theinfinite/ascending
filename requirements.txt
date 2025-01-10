@@ -1,0 +1,3 @@
+## This file is used to install the required libraries for the project (to be determined by Shirley)
+# numpy==1.21.2
+# pandas==1.3.3
