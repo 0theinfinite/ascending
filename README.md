@@ -1,6 +1,6 @@
 # Ascending Project
 
-This repository explores the relationship between school performance and intergenerational mobility in Illinois commuting zones, using school ratings and sentiment analysis of online reviews as key data sources. The study aims to illuminate educational disparities and contribute to fostering equitable opportunities for upward social mobility.
+This repository explores the relationship between school performance and intergenerational mobility in various U.S. commuting zones, leveraging data sources like school ratings and sentiment analysis of online reviews. The study aims to illuminate educational disparities and contribute to fostering equitable opportunities for upward social mobility.
 
 ## Table of Contents
 - Ascending Project (#ascending-project)
@@ -13,10 +13,10 @@ This repository explores the relationship between school performance and interge
   - [Contributors](#contributors)
 
 ## Introduction
-This project investigates the interplay between school performance and intergenerational mobility within Illinois commuting zones. By integrating school ratings and sentiment analysis of online reviews, it seeks to highlight patterns of educational disparities and propose avenues for promoting social mobility.
+This project investigates the interplay between school performance and intergenerational mobility within various commuting zones. By integrating school ratings and sentiment analysis of online reviews, it seeks to highlight patterns of educational disparities and propose avenues for promoting social mobility.
 
 ## Research Questions
-- How does school performance in Illinois commuting zones relate to intergenerational mobility?
+- How does school performance in commuting zones relate to intergenerational mobility?
 - What insights can be drawn from sentiment analysis of school reviews regarding educational disparities?
 
 ## Data Sources
@@ -51,7 +51,7 @@ The repository is organized as follows:
   - Main entry point for orchestrating the project workflow.
 
 ## Contributors
-- **Kunjian Li**
-- **Jeanette Wu**
 - **Carrie Huang**
+- **Jeanette Wu**
+- **Kunjian Li**
 - **Shirley Zhang**
