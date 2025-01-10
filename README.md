@@ -3,7 +3,6 @@
 This repository explores the relationship between school performance and intergenerational mobility in various U.S. commuting zones, leveraging data sources like school ratings and sentiment analysis of online reviews. The study aims to illuminate educational disparities and contribute to fostering equitable opportunities for upward social mobility.
 
 ## Table of Contents
-- [Ascending Project] (#ascending-project)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Research Questions](#research-questions)
