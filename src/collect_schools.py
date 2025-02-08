@@ -23,13 +23,13 @@ logger = logging.getLogger(__name__)
 
 class Config:
     STATES = ['MI', 'IN', 'IL', 'WI']  # List of states to process
-    LEVEL_CODES = 'm|h' # Middle and high schools, use None to fetch all levels
+    LEVEL_CODES = 'm|h'  # Middle and high schools, use None to fetch all levels
     API_KEY = 'kICbx7Ja0naaVKCG0y4dG6sT86dWH1vA5UdyG2YI'
     ZIP_CODES_PATH = 'data/geo/zip_codes.csv'
     API_BASE_URL = "https://gs-api.greatschools.org/v2/schools?"
     REQUEST_DELAY = 0.1  # Delay between API requests in seconds
     SCHOOLS_PER_PAGE = 50
-    OUTPUT_DIR = Path('output')
+    OUTPUT_DIR = Path('data/greatschools')
 
 class SchoolDataCollector:
     def __init__(self, config: Config):
