@@ -14,13 +14,13 @@ def setup_file_paths() -> Tuple[str, str, str, str]:
     current_dir = os.getcwd()
     
     # Define file names
-    school_file = "schools_il.csv"
+    school_file = "schools_data_all_states.csv"
     tracts_demo_file = "cz_2010_revised_urban_rural.xlsx"
     tracts_geo_file = "cb_2018_17_tract_500k.shp"
     cz_id_file = "cz_equivalency.xls"
     
     # Create file paths
-    school_file_path = os.path.join(current_dir, 'data', school_file)
+    school_file_path = os.path.join(current_dir, 'data','greatschools', school_file)
     geo_dir = os.path.join(current_dir, "data", 'geo')
     tracts_demo_path = os.path.join(geo_dir, tracts_demo_file)
     tracts_geo_path = os.path.join(geo_dir, tracts_geo_file)
@@ -44,7 +44,7 @@ def load_school_data(school_file_path: str) -> gpd.GeoDataFrame:
         geometry=gpd.points_from_xy(school_df.lon, school_df.lat),
         crs="EPSG:4326"
     )
-    return school_gdf[['geometry']].copy()
+    return school_gdf[['geometry','universal-id']].copy()
 
 def load_tract_data(tracts_geo_path: str) -> gpd.GeoDataFrame:
     """
@@ -71,6 +71,9 @@ def link_school_to_tract(school_identifier: gpd.GeoDataFrame,
     Returns:
         GeoDataFrame with schools linked to their nearest tract
     """
+    # Store original universal-id and geometry relationship
+    original_data = school_identifier[['universal-id', 'geometry']].copy()
+    
     # Create representative points for tracts
     tracts_identifier['inside_point'] = tracts_identifier.geometry.representative_point()
     tracts_identifier['geometry_tract'] = tracts_identifier.geometry
@@ -78,15 +81,18 @@ def link_school_to_tract(school_identifier: gpd.GeoDataFrame,
     
     # Reproject to appropriate CRS for USA
     tracts_identifier = tracts_identifier.to_crs(epsg=5070)
-    school_identifier = school_identifier.to_crs(epsg=5070)
+    school_geometry = school_identifier[['geometry']].to_crs(epsg=5070)
     
-    # Find nearest tract to each school
+    # Find nearest tract using only geometry
     school_tracts_id = gpd.sjoin_nearest(
-        school_identifier, 
+        school_geometry, 
         tracts_identifier, 
         how="left", 
         distance_col="distance"
     )
+    
+    # Add back the universal-id by index
+    school_tracts_id['universal-id'] = original_data['universal-id']
     
     school_tracts_id.rename(columns={'GEOID': 'Tract_FIPS'}, inplace=True)
     return school_tracts_id
@@ -180,6 +186,45 @@ def main():
         print("Successfully linked tracts to commuting zones")
         
         # You can add code here to save the results to files if needed
+        # Create output directory if it doesn't exist
+        output_dir = os.path.join(os.getcwd(), 'output')
+        os.makedirs(output_dir, exist_ok=True)
+
+        # Save school-tract linkage results
+        school_tracts_output = os.path.join(output_dir, 'school_tract_linkage.csv')
+        school_tracts.to_csv(school_tracts_output, index=False)
+        print(f"Saved school-tract linkage to {school_tracts_output}")
+
+        # Save tract-commuting zone linkage results
+        tracts_cz_output = os.path.join(output_dir, 'tract_cz_linkage.csv')
+        tracts_cz.to_csv(tracts_cz_output, index=False)
+        print(f"Saved tract-commuting zone linkage to {tracts_cz_output}")
+
+        # Print data types to verify
+        print("School-tract linkage Tract_FIPS dtype:", school_tracts['Tract_FIPS'].dtype)
+        print("Tract-CZ linkage Tract_FIPS dtype:", tracts_cz['Tract_FIPS'].dtype)
+        
+        # Convert Tract_FIPS to string in both dataframes before merging
+        school_tracts['Tract_FIPS'] = school_tracts['Tract_FIPS'].astype(str)
+        tracts_cz['Tract_FIPS'] = tracts_cz['Tract_FIPS'].astype(str)
+        
+        # Merge the two files
+        merged_data = pd.merge(
+            school_tracts,
+            tracts_cz,
+            on='Tract_FIPS',
+            how='left'
+        )
+        
+        # Print merge result info
+        print(f"Original school_tracts rows: {len(school_tracts)}")
+        print(f"Original tracts_cz rows: {len(tracts_cz)}")
+        print(f"Merged data rows: {len(merged_data)}")
+        
+        # Save merged results
+        merged_output = os.path.join(output_dir, 'school_tract_cz_merged.csv')
+        merged_data.to_csv(merged_output, index=False)
+        print(f"Saved merged data to {merged_output}")
         
     except FileNotFoundError as e:
         print(f"Error: Required file not found - {e}")
