@@ -185,9 +185,8 @@ def main():
         tracts_cz = link_tract_to_cz(tracts_fips, cz_id)
         print("Successfully linked tracts to commuting zones")
         
-        # You can add code here to save the results to files if needed
         # Create output directory if it doesn't exist
-        output_dir = os.path.join(os.getcwd(), 'output')
+        output_dir = os.path.join(os.path.dirname(os.getcwd()), 'data', 'links')
         os.makedirs(output_dir, exist_ok=True)
 
         # Save school-tract linkage results
