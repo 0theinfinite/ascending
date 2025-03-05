@@ -27,8 +27,8 @@ Education lies at the core of social mobility, shaping opportunities and outcome
 Which factors/characteristics of school profile contribute to the prediction of intergenerational mobility?
 
 ### Overall Findings
--Notably, a higher proportion of Black students and students from low-income families are associated with lower mobility.
--negative ratings and availability of study resources also play a crucial role. This finding aligns with broader research on systemic barriers to economic mobility faced by marginalized groups. 
+- Notably, a higher proportion of Black students and students from low-income families are associated with lower mobility.
+- negative ratings and availability of study resources also play a crucial role. This finding aligns with broader research on systemic barriers to economic mobility faced by marginalized groups. 
 - Our project indicates that race is a predominant determinant of intergenerational mobility, followed by the influence of income and educational resources. This effect remains robust across both county-level and commuting zone-level analyses. 
 
 
@@ -66,7 +66,7 @@ The research utilizes the following datasets:
 
 The repository is organized as follows:
 - `/data`: data folder: 
-  - `/edu: Contains all ducational datasets (e.g., government school performance data), but we are only consulting it for research insights and do not use it in the code. 
+  - `/edu`: Contains all ducational datasets (e.g., government school performance data), but we are only consulting it for research insights and do not use it in the code. 
   - `/geo`: Contains all geographic datasets (e.g., shapefiles, equivalency tables).
   - `/greatschools`: Contains all scraped data from GreatSchools (e.g., school descriptive data, ratings, comments and reviews).
   - `/links`: Contains all data sets that all used to link schools’ geographic coordinates other levels through county and commuting zone identifiers.
