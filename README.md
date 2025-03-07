@@ -4,13 +4,13 @@ This repository explores the relationship between school profile characteristics
 
 ## Table of Contents
 - [Ascending Project](#ascending-project)
+  - [Project Goals](#project-goals)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Research Questions](#research-questions)
+    - [Research Questions](#research-questions)
+    - [Overall Findings](#overall-findings)
   - [Data Sources](#data-sources)
-  - [Methodology](#methodology)
-  - [Data Cleaning and Wrangling](#data-cleaning-and-wrangling)
-  - [Data Analysis and Visualization](#data-analysis-and-visualization)
+  - [Libraries](#libraries)
   - [Project Structure](#project-structure)
   - [Contributors](#contributors)
 

@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 class Config:
     STATES = ['MI', 'IN', 'IL', 'WI']  # List of states to process
     LEVEL_CODES = 'm|h'  # Middle and high schools, use None to fetch all levels
-    API_KEY = 'kICbx7Ja0naaVKCG0y4dG6sT86dWH1vA5UdyG2YI'
+    API_KEY = 'OUR API KEY HERE'
     ZIP_CODES_PATH = 'data/geo/zip_codes.csv'
     API_BASE_URL = "https://gs-api.greatschools.org/v2/schools?"
     REQUEST_DELAY = 0.1  # Delay between API requests in seconds
