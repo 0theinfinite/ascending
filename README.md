@@ -1,6 +1,6 @@
 # Ascending Project
 ## Project Goals
-This repository explores the relationship between comprehensive school-level indicators and intergenerational mobility in various U.S. commuting zones, leveraging data sources like school ratings and sentiment analysis of online reviews. 
+This repository explores the relationship between school profile characteristics and intergenerational mobility in various counties and commuting zones at states, leveraging data sources like school statistics and sentiment analysis of online reviews, controlling economic and geographic indicators. 
 
 ## Table of Contents
 - [Ascending Project](#ascending-project)
@@ -16,7 +16,7 @@ This repository explores the relationship between comprehensive school-level ind
 
 ## Introduction
 
-This project investigates the interplay between school performance and intergenerational mobility within various commuting zones. By integrating school ratings and sentiment analysis of online reviews, it seeks to highlight patterns of educational disparities and propose avenues for promoting social mobility.
+This project investigates the interplay between school performance and intergenerational mobility within various counties and commuting zones. By integrating school ratings and sentiment analysis of online reviews into the **county** and **commuting zone** levels, it seeks to highlight patterns of educational disparities and propose avenues for promoting social mobility.
 
 Originally focused solely on Illinois, the project has expanded to examine school performance across Wisconsin, Illinois, Indiana, and Michigan. This broader geographic scope enhances the generalizability of findings.
 
@@ -28,17 +28,18 @@ Which factors/characteristics of school profile contribute to the prediction of 
 
 ### Overall Findings
 - Notably, a higher proportion of Black students and students from low-income families are associated with lower mobility.
-- negative ratings and availability of study resources also play a crucial role. This finding aligns with broader research on systemic barriers to economic mobility faced by marginalized groups. 
-- Our project indicates that race is a predominant determinant of intergenerational mobility, followed by the influence of income and educational resources. This effect remains robust across both county-level and commuting zone-level analyses. 
+- Negative ratings and accessbility of educaitonal resources play a crucial role. This finding aligns with broader research on systemic barriers to economic mobility faced by marginalized groups. 
+- Our project indicates that race is a predominant determinant of intergenerational mobility, followed by the influence of income and educational resources. This effect remains robust across both county-level and commuting zone-level analyses, cross validated by machine learning algorithms. 
 
 
 ## Data Sources
 
 The research utilizes the following datasets:
 
-- **School Statistics:** Scraped and aggregated from GreatSchools.org to quantify school performance.
-- **Intergenerational Mobility Data:** Sourced from the Chetty et al.’s dataset (2014), from their project “[Where is the land of Opportunity? The Geography of Intergenerational Mobility in the United States]( https://academic.oup.com/qje/article-abstract/129/4/1553/1853754)”.
-- **Geospatial Data:** Includes school location mapping via **geopandas** and tract-to-commuting-zone conversions.
+- **School Statistics:** Scraped and aggregated from GreatSchools.org to quantify school performance, data are cross check by Government data.
+- **Intergenerational Mobility Data:** Sourced from the Chetty et al.’s dataset (2014), from their project “[Where is the land of Opportunity? The Geography of Intergenerational Mobility in the United States](https://academic.oup.com/qje/article-abstract/129/4/1553/1853754)”.
+- **Geospatial Data:** School locations in geographic coordinates, mapped to high levels via **geopandas**, i.e. the tract-to-county and -to-commuting-zone conversions.
+- **Census Data**: Regional demographic records, accessible at census.gov.
 
 ## Libraries
 - **Python Standard Library**  
