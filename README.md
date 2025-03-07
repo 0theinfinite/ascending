@@ -42,26 +42,8 @@ The research utilizes the following datasets:
 - **Census Data**: Regional demographic records, accessible at census.gov.
 
 ## Libraries
-- **Python Standard Library**  
-  - `json`  
-  - `ast`  
-  - `re`  
-  - `random`  
-  - `logging`  
+See `requirements.txt`.
 
-- **Third-Party Packages**  
-  - `pandas==1.5.3`  
-  - `numpy==1.24.2`  
-  - `bs4==4.11.2`  *(installed as `beautifulsoup4`)*
-  - `vaderSentiment==3.3.2`
-  - `geopandas==0.13.2`
-  - `Shapely==2.0.1`
-  - `fake_useragent==1.1.3`
-  - `statsmodels==0.13.5`
-  - `seaborn==0.12.2`
-  - `matplotlib==3.7.1`
-  - `scikit-learn==1.2.2`
-  - `scipy==1.10.1`
 
 ## Project Structure
 
