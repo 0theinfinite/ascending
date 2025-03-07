@@ -4,6 +4,9 @@ School Data Collection Script
 
 This script fetches school information from the GreatSchools API for specified states
 and their zip codes, saving the data to separate CSV files by state.
+
+Created by Kunjian Li
+
 """
 
 import requests

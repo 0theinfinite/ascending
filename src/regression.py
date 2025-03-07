@@ -1,5 +1,13 @@
-# Group name: Ascending  
-# Group members: Jeanette, Kunjian, Shirley, Carrie
+#!/usr/bin/env python3
+"""
+School Data Regression Script (with Robustness Analysis)
+
+This script performs regression analysis on the relationship between school performance
+and intergenerational mobility in counties and commuting zones.
+
+Created by Jeanette Wu
+
+"""
 
 import pandas as pd
 import numpy as np

@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+"""
+School Statistics Collection Script
+
+This script fetches school statistics looping the urls provided by the GreatSchools API and cleans the data.
+
+Created by Shirley Zhang, Kunjian Li
+
+"""
+
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd

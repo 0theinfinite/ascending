@@ -4,7 +4,8 @@ collect_reviews.py
 This script scrapes school reviews from GreatSchools and performs sentiment analysis.
 The results are saved to a CSV file.
 
-Author: Carrie Huang, Jeanette Wu, Kunjian Li, Shirley Zhang
+Created by Carrie Huang, Jeanette Wu
+
 """
 
 import csv

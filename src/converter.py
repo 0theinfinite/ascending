@@ -1,3 +1,15 @@
+#!/usr/bin/env python3
+"""
+School Data Consolidation Script
+
+This script takes school data and links it to tract and commuting zone data for further analysis.
+
+Created by Shirley Zhang
+
+"""
+
+
+
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
