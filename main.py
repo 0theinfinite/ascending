@@ -9,9 +9,9 @@ Author: Carrie Huang, Jeanette Wu, Kunjian Li, Shirley Zhang
 
 import os
 import argparse
-from src.data_loader import *
-from src.data_preprocessing import *
-from src.analysis import *
+from src.collect_reviews import *
+from src.collect_schools import *
+from src.converter import *
 from src.visualization import *
 from src.sentiment_analysis import *
 
