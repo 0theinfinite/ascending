@@ -6,6 +6,10 @@ This script fetches school statistics looping the urls provided by the GreatScho
 
 Created by Shirley Zhang, Kunjian Li
 
+We disclose that we employed Claude to integrate comprehensive logging and robust error-handling mechanisms,
+thereby enhancing the script's overall reliability. Additionally, we encapsulated the script within a class
+to improve its modularity and reusability.
+
 """
 
 

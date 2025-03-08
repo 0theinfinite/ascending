@@ -6,6 +6,10 @@ The results are saved to a CSV file.
 
 Created by Carrie Huang, Jeanette Wu
 
+We disclose that we employed Claude to integrate comprehensive logging and robust error-handling mechanisms,
+thereby enhancing the script's overall reliability. Additionally, we encapsulated the script within a class
+to improve its modularity and reusability.
+
 """
 
 import csv

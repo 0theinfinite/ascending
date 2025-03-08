@@ -22,6 +22,8 @@ Originally focused solely on Illinois, the project has expanded to examine schoo
 
 Education lies at the core of social mobility, shaping opportunities and outcomes for future generations. By examining key factors such as race/ethnicity, household income, school resources, this project highlights the systemic inequalities that can affect students’ social mobility. Understanding how these variables interact allows us to pinpoint where disparities arise and to inform policies aimed at promoting equitable resource distribution. The study aims to illuminate educational disparities and contribute to fostering equitable opportunities for upward social mobility.
 
+You are welcome to watch our introduction video accessible at: https://uchicago.box.com/s/i2nnfenbymhwqhh9eo9gtv417a6ttz8x
+
 ### Research Questions
 
 Which factors/characteristics of school profile contribute to the prediction of intergenerational mobility?
