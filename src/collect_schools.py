@@ -7,6 +7,10 @@ and their zip codes, saving the data to separate CSV files by state.
 
 Created by Kunjian Li
 
+We disclose that we employed Claude to integrate comprehensive logging and robust error-handling mechanisms,
+thereby enhancing the script's overall reliability. Additionally, we encapsulated the script within a class
+to improve its modularity and reusability.
+
 """
 
 import requests

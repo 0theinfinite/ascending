@@ -6,6 +6,10 @@ This script takes school data and links it to tract and commuting zone data for 
 
 Created by Shirley Zhang
 
+We disclose that we employed Claude to integrate comprehensive logging and robust error-handling mechanisms,
+thereby enhancing the script's overall reliability. Additionally, we encapsulated the script within a class
+to improve its modularity and reusability.
+
 """
 
 

@@ -5,6 +5,11 @@ This script processes and merges data from multiple sources, including GreatScho
 sentiment analysis results, result from geographic converter and intergenerational mobility data.
 
 Author: Carrie Huang, Jeanette Wu, Kunjian Li, Shirley Zhang
+
+We disclose that we employed Claude to integrate comprehensive logging and robust error-handling mechanisms,
+thereby enhancing the script's overall reliability. Additionally, we encapsulated the script within a class
+to improve its modularity and reusability.
+
 """
 
 import pandas as pd
