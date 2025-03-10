@@ -4,7 +4,7 @@ merge_data.py
 This script processes and merges data from multiple sources, including GreatSchools scraping data,
 sentiment analysis results, result from geographic converter and intergenerational mobility data.
 
-Author: Carrie Huang, Jeanette Wu, Kunjian Li, Shirley Zhang
+Author: Carrie Huang, Jeanette Wu
 
 We disclose that we employed Claude to integrate comprehensive logging and robust error-handling mechanisms,
 thereby enhancing the script's overall reliability. Additionally, we encapsulated the script within a class
