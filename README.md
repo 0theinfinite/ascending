@@ -38,10 +38,11 @@ Which factors/characteristics of school profile contribute to the prediction of 
 
 The research utilizes the following datasets:
 
-- **School Statistics:** Scraped and aggregated from GreatSchools.org to quantify school performance, data are cross check by Government data.
-- **Intergenerational Mobility Data:** Sourced from the Chetty et al.’s dataset (2014), from their project “[Where is the land of Opportunity? The Geography of Intergenerational Mobility in the United States](https://academic.oup.com/qje/article-abstract/129/4/1553/1853754)”.
-- **Geospatial Data:** School locations in geographic coordinates, mapped to high levels via **geopandas**, i.e. the tract-to-county and -to-commuting-zone conversions.
-- **Census Data**: Regional demographic records, accessible at census.gov.
+- **School Statistics:** Scraped and aggregated from GreatSchools.org to quantify school performance, utilizing the GreatSchools.org API. These data are crosschecked with Government data for authenticity. School profile characteristics including college preparation, advanced courses, test scores, students ethnicity, low-income family proportions and so on. 
+- **School Reviews:** Scraped school reviews from the review section of school's introduction website, as the ingredients for sentiment analysis.
+- **Intergenerational Mobility Data:** Sourced from the Chetty et al.’s dataset (2014), from their paper “[Where is the land of Opportunity? The Geography of Intergenerational Mobility in the United States](https://academic.oup.com/qje/article-abstract/129/4/1553/1853754)”.
+- **Geospatial Data:** School locations in geographic coordinates, mapped to high levels via **geopandas**, i.e. the tract-to-county and -to-commuting-zone conversions. This also include county shapes, zip codes and so on.
+- **Census Data**: Regional demographic records, accessible at census.gov, including average income per capita, population (growth), land acres and so on.
 
 ## Libraries
 See `requirements.txt`.
