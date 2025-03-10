@@ -51,27 +51,25 @@ See `requirements.txt`.
 
 The repository is organized as follows:
 - `/data`: data folder: 
-  - `/edu`: Contains all ducational datasets (e.g., government school performance data), but we are only consulting it for research insights and do not use it in the code. 
-  - `/geo`: Contains all geographic datasets (e.g., shapefiles, equivalency tables).
+  - `/edu`: Educational datasets (e.g., government school performance data), but we are only consulting it for research insights and do not use it in the code. 
+  - `/geo`: Geographic datasets (e.g., shapefiles, equivalency tables).
   - `/greatschools`: Contains all scraped data from GreatSchools (e.g., school descriptive data, ratings, comments and reviews).
-  - `/links`: Contains all data sets that all used to link schools’ geographic coordinates other levels through county and commuting zone identifiers.
-  - `county_edu_mob.csv`: csv file used for data analysis. Contains education data aggregated to county-level and absolute mobility.
-  -  `cz_from_county_edu_mob.csv`: Csv file used for data analysis. Contains education data aggregated to commuting-zone-levels and absolute mobility.
-  - `intergenerational_mobility.xls`: Excel file Chetty et al. (2014). We used Table 3: Intergenerational Mobility Statistics by County, Table 5: Intergenerational Mobility Statistics by Commuting Zone, and Table 8: Commuting Zone Characteristics.
-- `/src`: Contains all codes
-  - `collect_schools.py`: codes used to scrape GreatSchools descriptive data.
-  - `collect_reviews.py`: codes used to scrape the review sections from GreatSchools and perform Vader Sentiment analysis.
-   - `quantity_scraper.py`: codes used to scrape the ratings of schools. For instance, the scores for math exams and SAT preparation courses. 
-   - `converter.py`: codes used to link our 3-layered-geographic-hierachy (school, county, and commuting zone)
-   - `merge_data.py`: codes used to merge different data sets, aggregate school-level data to county-level and commuting-zone-level, and match with respective intergenerational mobility data. 
-    - `regression.py`: codes used to perform dimensionality reduction (correlation matrix, LASSO), use multiple machine learning regression models, visualizations, and evaluate the performance. 
-- `/results` # Generated outputs and visualizations.
-- `Final Project Progress Report 1.pdf` # First project report.
-- `Final Project Progress Report 2.pdf` # Second project report.
-- `README.md`
-- `LICENSE`
+  - `/links`: Datasets to link schools to higher levels through it coordinates, and county/commuting zone identifiers.
+  - `intergenerational_mobility.xls`: Excel file Chetty et al. (2014). Sheet 3,5 and 8 are utilized.
+- `/src`:
+  - `collect_schools.py`: Scrape GreatSchools API data.
+  - `collect_reviews.py`: Scrape the review sections from GreatSchools and perform Vader Sentiment analysis.
+  - `quantity_scraper.py`: Scrape the ratings and statistics of schools. 
+  - `converter.py`: Link our 4-layered-geographic-hierachy (school, tract, county, and commuting zone)
+  - `merge_data.py`: Merge different data sets, aggregate school-level data to county-level and commuting-zone-level, and match with respective intergenerational mobility data. 
+  - `regression.py`: Perform dimensionality reduction, casual inference, machine learning, visualizations, and performance evaluation.
 - `requirements.txt` # Python dependencies required to run the project.
 - `main.py` # Main entry point for orchestrating the project workflow.
+- `Progress_Report_1.pdf` and `Progress_Report_2.pdf`
+- `Ascending-Slides_Final_Presentation.pdf` and `Ascending-Slides_Final_Presentation-UPDATED.pdf`
+- `/results`
+- `README.md`
+- `LICENSE`
 
 ## Contributors
 - **Kunjian Li**: Project management. GreatSchools API maintenance. Collected school descriptive and quantitative rating data from GreatSchools. GitHub repository management. Draft presentation slides. 
